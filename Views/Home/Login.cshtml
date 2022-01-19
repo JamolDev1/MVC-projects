@@ -1,0 +1,37 @@
+@model MVCLP.ViewModels.LoginViewModel
+
+<div>
+    <form class="mt-5 col"  method="post" asp-action="Login" asp-controller="Account">
+        <fieldset class=" mx-15" style="padding: 50px;" >
+            <h2 class="text-center fs-title">Log into your account</h2>
+            <p class="text-center">
+                <input class="form-control" hidden="true" asp-for="@Model.ReturnUrl">
+                <label asp-for="Email"></label>
+            </p>
+
+            <div style="margin-left:430px" class="col-lg-3 col-md-3">
+                <input class="text-center form-control " asp-for="Email">
+            </div>
+            
+            <p class="text-center">
+                <label asp-for="Password"></label>
+            </p>
+            
+            <div style="margin-left:430px" class="col-lg-3 col-md-3">
+                <input class=" form-control" asp-for="Password">
+            </div>
+            <div class="text-center">
+
+                <button class=" btn btn-info mt-4" type="submit" >Sign in</button>
+            </div>
+        
+        </fieldset>
+        
+        <p>
+            <h4 class="text-center">No account ?</h4>
+            <div class="text-center">
+                <a class="text-center btn btn-primary" href="/account/register?returnUrl=@Model.ReturnUrl">Sign up</a>
+            </div>
+        </p>
+    </form>
+</div>

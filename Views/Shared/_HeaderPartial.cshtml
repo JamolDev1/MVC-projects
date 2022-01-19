@@ -1,0 +1,39 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-sm " >
+        <div class="container-fluid col-lg-10 col-md-8">
+            <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">MVCLP</a>
+            <a class="navbar-brand" href="/">
+                <img src="" alt="" height="" class="mx-2 d-inline-block align-text-top logo-light-shadow ">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark btn btn-info" asp-area="" style="border-radius: 10px;" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="mx-1 nav-link btn btn-info"  style="border-radius: 10px;" asp-controller="Home" asp-action="Login" ><strong>Log in</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="mx-1 nav-link btn btn-info"  style="border-radius: 10px;"  href="~/register"><strong>Register</strong></a>
+                    </li>
+                </ul>
+                @using (Html.BeginForm("byTagTitle", "Search", FormMethod.Post))
+                {
+                    @Html.TextBox("query")
+                    <input style="border-radius:10px" type="submit" value="Submit"/>
+                } 
+                <!-- <form class="d-flex">
+                    
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> --> 
+
+                
+            </div>
+        </div>
+    </nav>
+</header

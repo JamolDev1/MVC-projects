@@ -1,0 +1,37 @@
+@model MVCLP.ViewModels.RegisterViewModel
+<form class="mt-5 col"  method="register" asp-action="Register" asp-controller="Account">
+
+    <input hidden="true" asp-for="@Model.ReturnUrl">
+
+    <div class=" my-5 text-center" style=" padding: auto" >
+        <div>
+            <label asp-for="Fullname"></label>
+            <p style="margin-left:480px" class="col-lg-3 col-md-3">
+                
+                <input class="form-control" asp-for="Fullname">
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="Username"></label>
+            <p style="margin-left:480px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="Username">
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="Email"></label>
+            <p style="margin-left:480px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="Email">
+            </p>
+        </div>
+        <div class="text-center">
+            <label asp-for="Password"></label>
+            <p style="margin-left:480px" class="col-lg-3 col-md-3">
+                <input class="form-control" asp-for="Password">    
+            </p>
+        </div>
+
+        <button class="btn btn-primary" type="submit" href="Account/Login?ReturnUrl=%2Fwrite">Register</button>
+    </div>
+
+
+</form>
